@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesi Nova Choir</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZYN43FK5K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TZYN43FK5K');
+    </script>
+    
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="googlef89f889c64754153">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            background: #031732;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Rajdhani', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Simple gradient background */
+        .bg-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(130, 126, 93, 0.1) 0%, #031732 70%);
+        }
+        
+        /* Phoenix Logo - Static Background */
+        .phoenix-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            opacity: 0.05;
+            z-index: 1;
+        }
+        
+        .phoenix-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Main container */
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            text-align: center;
+        }
+        
+        /* Small phoenix above title */
+        .phoenix-small {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            filter: drop-shadow(0 0 20px rgba(130, 126, 93, 0.6));
+            animation: fadeIn 1s ease;
+        }
+        
+        .phoenix-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Main title - Simplified */
+        .main-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            color: #827E5D;
+            text-shadow: 
+                0 0 30px rgba(130, 126, 93, 0.8),
+                0 0 60px rgba(130, 126, 93, 0.4);
+            margin-bottom: 50px;
+        }
+        
+        /* Coming soon text - Simplified */
+        .coming-soon {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 300;
+            letter-spacing: 0.5em;
+            color: rgba(130, 126, 93, 0.9);
+            text-transform: uppercase;
+            padding: 20px 40px;
+            border: 1px solid rgba(130, 126, 93, 0.3);
+            background: rgba(130, 126, 93, 0.05);
+            box-shadow: 
+                inset 0 0 20px rgba(130, 126, 93, 0.1),
+                0 0 20px rgba(130, 126, 93, 0.2);
+        }
+        
+        /* Simple decorative lines */
+        .decorative-line {
+            position: fixed;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #827E5D, transparent);
+            width: 300px;
+            opacity: 0.3;
+        }
+        
+        .line-top {
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .line-bottom {
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Fade in animation - only on load */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        
+        .main-title {
+            animation: fadeIn 1s ease 0.2s both;
+        }
+        
+        .coming-soon {
+            animation: fadeIn 1s ease 0.4s both;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: clamp(2rem, 10vw, 4rem);
+                letter-spacing: 0.1em;
+            }
+            
+            .coming-soon {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+                letter-spacing: 0.3em;
+                padding: 15px 25px;
+            }
+            
+            .phoenix-logo {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .phoenix-small {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Background Phoenix Logo -->
+    <div class="phoenix-logo">
+        <img src="logo.svg" alt="Phoenix Logo">
+    </div>
+    
+    <!-- Decorative Lines -->
+    <div class="decorative-line line-top"></div>
+    <div class="decorative-line line-bottom"></div>
+    
+    <div class="container">
+        <!-- Small Phoenix Logo above title -->
+        <div class="phoenix-small">
+            <img src="logo.svg" alt="Phoenix Logo">
+        </div>
+        
+        <h1 class="main-title">GENESI NOVA CHOIR</h1>
+        <div class="coming-soon">Çok yakında sizlerle</div>
+    </div>
+    
+    <script>
+        // Simple typing effect for coming soon text - no continuous animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const comingSoonText = document.querySelector('.coming-soon');
+            if (comingSoonText) {
+                const originalText = comingSoonText.textContent;
+                let charIndex = 0;
+                
+                comingSoonText.textContent = '';
+                
+                function typeText() {
+                    if (charIndex < originalText.length) {
+                        comingSoonText.textContent += originalText[charIndex];
+                        charIndex++;
+                        setTimeout(typeText, 100);
+                    }
+                }
+                
+                setTimeout(typeText, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
